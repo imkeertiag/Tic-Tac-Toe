@@ -81,4 +81,7 @@ io.on("connection", (socket) => {
     }
   });
 });
-httpServer.listen(3000);
+const port= process.env.PORT;
+httpServer.listen(port,(req,res)=>{
+  console.log(`App listening on  Port ${port}`);
+});
