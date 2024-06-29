@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 require("dotenv").config();
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: `${process.env.FRONTENDURL}`,
+  cors: `${process.env.FRONTENDURL || `http://localhost:5174/`}`,
 });
 
 const allUsers = {};
@@ -81,7 +81,7 @@ io.on("connection", (socket) => {
     }
   });
 });
-const port= process.env.PORT;
+const port= process.env.PORT || 3000;
 httpServer.listen(port,(req,res)=>{
   console.log(`App listening on  Port ${port}`);
 });
