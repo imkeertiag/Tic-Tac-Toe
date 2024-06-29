@@ -1,1 +1,1 @@
-export const mybackendURL = `http://localhost:3000`;
+export const mybackendURL = `https://tic-tac-toe-by-keerti.vercel.app`;
