@@ -3,7 +3,7 @@ const { Server } = require("socket.io");
 require("dotenv").config();
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: `${process.env.FRONTENDURL || `http://localhost:5174/`}`,
+  cors: `${process.env.FRONTENDURL || `https://tic-tac-toe-imkeerti.vercel.app/`}`,
 });
 
 const allUsers = {};
